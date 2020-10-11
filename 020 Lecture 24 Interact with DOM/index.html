@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interact with DOM</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <button @click="increaseCounter" @mouseover="hover = true" @mouseleave="hover = false">Increase</button>
+    <button @click="decreaseCounter" @mouseover="hover = true" @mouseleave="hover = false">Decrease</button>
+    <button @click="customIncrease(2, $event)">Increase by...</button>
+    <p>{{ counter }}</p>
+    <p v-show="hover">You are hovering over a button.</p>
+    <p @mousemove="updateCoordinates">Coordinates of cursor: {{ x }} / {{ y }}
+      <span @mousemove.stop=""> BLIND SPOT</span>
+    </p>
+    <input type="text" value="Type in text here...">
+  </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>

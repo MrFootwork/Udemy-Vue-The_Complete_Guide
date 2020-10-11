@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue JS Getting Started</title>
+
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <div id="course">
+    <p>course</p>
+    <h1 v-once>{{title}}</h1>
+    <p>{{sayHello() }} - <a :href="link">Google</a></p>
+    <p v-html="finishedLink"></p>
+  </div>
+  <hr>
+
+  <div id="app">
+    <p>app</p>
+    <input type="text" v-on:input='changeTitle'>
+    <p>{{ title }}</p>
+  </div>
+  <hr>
+
+  <div id="app2">
+    <p>app2</p>
+    <span v-bind:title="message">
+      Hover your mouse over me for a few seconds
+      to see my dynamically bound title!
+    </span>
+  </div>
+  <hr>
+
+  <div id="app-3">
+    <p>app-3</p>
+    <span v-if="seen" v-bind:title="message">Now you see me</span>
+  </div>
+  <hr>
+
+  <div id="functionDisplay">
+    <p>funtionsDisplay</p>
+    <p>{{display()}}</p>
+  </div>
+  <hr>
+
+  <div id="linker">
+    <p>linker</p>
+    <a v-bind:href="link">Google</a>
+  </div>
+
+  <script src="vue-app.js"></script>
+</body>
+
+</html>

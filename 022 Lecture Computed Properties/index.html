@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <button @click="counter++">Increase</button>
+    <button @click="counter--">Decrease</button>
+    <button @click="counter2++">Increase Second</button>
+    <p>Counter: {{ counter }} | {{ counter2 }}</p>
+    <p>Result: {{ result() }} | {{ output }}</p>
+  </div>
+
+</body>
+
+</html>
+
+<script src="app.js"></script>
